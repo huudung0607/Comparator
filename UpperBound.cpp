@@ -4,7 +4,7 @@
 #include <algorithm>
 using namespace std;
 
-int lowerbound(vector<int> a, int l, int r, int x)
+int upperbound(vector<int> a, int l, int r, int x)
 {
 	int res = -1;
 	while (l <= r)
@@ -33,7 +33,7 @@ int main()
 		cin >> a[i];
 	}
 	sort(a.begin(), a.end());
-	int pos = lowerbound(a, 0, n - 1, x);
+	int pos = upperbound(a, 0, n - 1, x);
 	if (pos == -1)
 	{
 		cout << "NOT FOUND" << endl;
